@@ -75,7 +75,7 @@ RUN ldconfig
 
 RUN git config --global user.name "flexi"
 RUN git config --global user.email "flexi@flexi.com"
-RUN git clone --single-branch --branch master https://github.com/FlexiRepair/FlexiRepair.git
+RUN git clone --single-branch --branch master https://github.com/FlexiRepair/FlexiRepair.git flexi
 #RUN mkdir flexi-data
 RUN apt-get update && apt-get install nano -y
 RUN conda env create -f flexi/environment.yml
