@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:smallest:346b1d:011/smallest.c b/introclass/introclass:smallest:346b1d:011/smallest.c
+--- a/introclass/introclass:smallest:346b1d:011/smallest.c
++++ b/introclass/introclass:smallest:346b1d:011/smallest.c
+@@ -16,7 +16,7 @@ int main() {
+ 	
+ 	if (a<=b && a<=c && a<=d) {
+ 		printf("%d is the smallest\n",a);
+-		return 1;
++		return 0;
+ 	}
+ 	else if (b<=a && b<=c && b<=d) {
+ 		printf("%d is the smalles\n",b);

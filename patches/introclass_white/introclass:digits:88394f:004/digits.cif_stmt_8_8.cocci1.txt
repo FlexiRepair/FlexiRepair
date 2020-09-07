@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:digits:88394f:004/digits.c b/introclass/introclass:digits:88394f:004/digits.c
+--- a/introclass/introclass:digits:88394f:004/digits.c
++++ b/introclass/introclass:digits:88394f:004/digits.c
+@@ -13,7 +13,7 @@
+ 	printf("\n");
+ 	digits = 1;
+   
+-	if (n == 0)
++	if (0 == n)
+ 		printf("0\n");
+ 		
+ 	while (n > 0) {

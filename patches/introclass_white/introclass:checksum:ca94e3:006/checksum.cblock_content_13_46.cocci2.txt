@@ -1,0 +1,14 @@
+diff -u -p a/introclass/introclass:checksum:ca94e3:006/checksum.c b/introclass/introclass:checksum:ca94e3:006/checksum.c
+--- a/introclass/introclass:checksum:ca94e3:006/checksum.c
++++ b/introclass/introclass:checksum:ca94e3:006/checksum.c
+@@ -4,8 +4,8 @@
+ 
+ int main () {
+ 	char x, rem;
+-	char sum; 
+-	char checksum;
++	int sum; 
++	int checksum;
+ //
+ 	
+         printf("Enter an abitrarily long string, ending with carriage return > ");

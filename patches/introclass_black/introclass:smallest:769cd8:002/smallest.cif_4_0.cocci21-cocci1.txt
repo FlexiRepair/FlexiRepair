@@ -1,0 +1,15 @@
+diff -u -p a/introclass/introclass:smallest:769cd8:002/smallest.c b/introclass/introclass:smallest:769cd8:002/smallest.c
+--- a/introclass/introclass:smallest:769cd8:002/smallest.c
++++ b/introclass/introclass:smallest:769cd8:002/smallest.c
+@@ -10,9 +10,9 @@ int main() {
+ 	a = y;
+ 	else
+ 	a = x;
+-	if (y >= z)
++	if (y > z)
+ 	a = z;
+-	if (z >= t)
++	if (z > t)
+ 	a = t;
+ 	printf("%d is the smallest \n", a);
+ 	return 0;

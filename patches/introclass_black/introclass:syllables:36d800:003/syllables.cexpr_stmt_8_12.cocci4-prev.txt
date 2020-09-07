@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:syllables:36d800:003/syllables.c b/introclass/introclass:syllables:36d800:003/syllables.c
+--- a/introclass/introclass:syllables:36d800:003/syllables.c
++++ b/introclass/introclass:syllables:36d800:003/syllables.c
+@@ -12,7 +12,7 @@ int main () {
+   int i,len, s;
+   s=0;
+   printf("Please enter a string > ");
+-  scanf("%s",instr);
++  gets(instr);
+     len = strlen(instr);
+     for (i = 0; i <len ; i++) {
+        if (instr[i]=='a' || instr[i]=='e' || instr[i]=='i' || instr[i]=='o' || instr[i]=='u' || instr[i]=='y') 

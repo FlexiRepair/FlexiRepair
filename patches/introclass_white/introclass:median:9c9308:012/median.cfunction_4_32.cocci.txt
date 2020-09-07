@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:median:9c9308:012/median.c b/introclass/introclass:median:9c9308:012/median.c
+--- a/introclass/introclass:median:9c9308:012/median.c
++++ b/introclass/introclass:median:9c9308:012/median.c
+@@ -23,7 +23,7 @@ median=n2;
+ 
+ printf("%.0lf is the median\n",median);
+ 
+-return(0);
++return 0;
+ 
+ 
+ 

@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:digits:0cdfa3:000/digits.c b/introclass/introclass:digits:0cdfa3:000/digits.c
+--- a/introclass/introclass:digits:0cdfa3:000/digits.c
++++ b/introclass/introclass:digits:0cdfa3:000/digits.c
+@@ -12,7 +12,7 @@ int main()
+   scanf("%s",&digit);
+   c=strlen(digit);
+   printf("\n");
+-  for(i=1;i<c;i++)
++  for (i = 1; i <= c; i++)
+   {
+     if(digit[i]=='-')
+     {

@@ -1,0 +1,16 @@
+@@
+expression E1;
+expression E0;
+@@
+- if (E0 && E1)  
++ if (E1)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_0702f23_72de3f_tools#perf#util#cs-etm.c,revFiles/0702f23_72de3f_tools#perf#util#cs-etm.c}: cs_etm__process_auxtrace_info)
+

@@ -1,0 +1,5 @@
+@@
+@@
+- return 1; 
++ return 0; 
+// Infered from: (contiki/{prevFiles/prev_e584a5_d73b22_core#net#rpl#rpl-ext-header.c,revFiles/e584a5_d73b22_core#net#rpl#rpl-ext-header.c}: rpl_verify_hbh_header), (contiki/{prevFiles/prev_e584a5_d73b22_core#net#rpl#rpl-ext-header.c,revFiles/e584a5_d73b22_core#net#rpl#rpl-ext-header.c}: rpl_verify_hbh_header), (contiki/{prevFiles/prev_e584a5_d73b22_core#net#rpl#rpl-ext-header.c,revFiles/e584a5_d73b22_core#net#rpl#rpl-ext-header.c}: 

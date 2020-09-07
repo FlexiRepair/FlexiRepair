@@ -1,0 +1,24 @@
+diff -u -p a/introclass/introclass:smallest:af81ff:000/smallest.c b/introclass/introclass:smallest:af81ff:000/smallest.c
+--- a/introclass/introclass:smallest:af81ff:000/smallest.c
++++ b/introclass/introclass:smallest:af81ff:000/smallest.c
+@@ -10,17 +10,17 @@ double a, b, c, d, m, n, p;
+ printf("Please enter 4 numbers separated by spaces > ");
+ scanf("%lf""%lf""%lf""%lf", &a, &b, &c, &d);
+ 
+-if (a > b)
++if (b <= a)
+ m=b;
+ else if (a < b)
+ m=a;
+ 
+-if (m > c)
++if (c <= m)
+ n=c;
+ else if (m < c)
+ n=m;
+ 
+-if (n > d)
++if (d <= n)
+ p=d;
+ else if (n < d)
+ p=n;

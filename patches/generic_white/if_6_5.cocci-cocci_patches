@@ -1,0 +1,16 @@
+@@
+expression E1;
+expression E0;
+@@
+- if (E0 ||  E1)  
++ if (E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (linux/{prevFiles/prev_22770d_1b128703_drivers#gpio#gpio-omap.c,revFiles/22770d_1b128703_drivers#gpio#gpio-omap.c}: omap_gpio_runtime_resume)
+

@@ -1,0 +1,10 @@
+diff -u -p a/introclass/introclass:median:93f87b:012/median.c b/introclass/introclass:median:93f87b:012/median.c
+--- a/introclass/introclass:median:93f87b:012/median.c
++++ b/introclass/introclass:median:93f87b:012/median.c
+@@ -13,5 +13,5 @@ int main(void)
+         printf("%d is the median\n", int2);
+ 	else if (((int3 <= int1) && (int3 >= int2)) || ((int3 <= int2) && (int3 >= int1)))
+         printf("%d is the median\n", int3);
+-	return 0;
++	return (0);
+ }                                             

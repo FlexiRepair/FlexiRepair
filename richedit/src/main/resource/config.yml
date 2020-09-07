@@ -1,0 +1,29 @@
+java:
+    8home:  /Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+spinfer:
+    home:   /data/spinfer/spinfer.native
+coccinelle:
+    home:   /data/spinfer/statics
+
+dataset:
+    inputPath : /data/flexi-data/patches
+    repo:   /data/flexi-data/datasets
+
+miner:
+    projectType : c
+    datapath: /data/flexi-data/
+
+
+
+    pjName : patches
+    portDumps : 6399
+    numOfWorkers : 14
+    hostname : localhost
+    hunkLimit : 3
+    patchSize : 50
+
+
+    projectList : git
+    inputPath : /data/flexi-data/patches
+    redisPath : /data/flexi/python/data/redis
+    srcMLPath :  /usr/local/bin/srcml

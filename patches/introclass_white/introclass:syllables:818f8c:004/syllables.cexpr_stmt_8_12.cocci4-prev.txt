@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:syllables:818f8c:004/syllables.c b/introclass/introclass:syllables:818f8c:004/syllables.c
+--- a/introclass/introclass:syllables:818f8c:004/syllables.c
++++ b/introclass/introclass:syllables:818f8c:004/syllables.c
+@@ -17,7 +17,7 @@ int main(void){
+ 
+ 
+     printf("Please enter a string > ");
+-    scanf("%s",str);
++    gets(str);
+ 
+     len = strlen(str);
+ 

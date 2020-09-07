@@ -1,0 +1,21 @@
+diff -u -p a/introclass/introclass:grade:bfad6d:001/grade.c b/introclass/introclass:grade:bfad6d:001/grade.c
+--- a/introclass/introclass:grade:bfad6d:001/grade.c
++++ b/introclass/introclass:grade:bfad6d:001/grade.c
+@@ -8,7 +8,7 @@ int main () {
+     scanf("%f%f%f%f", &thresha, &threshb, &threshc, &threshd);
+     printf("Thank you. Now enter student score (percent) >");
+     scanf("%f", &stuscore);
+-    if (stuscore > thresha)
++    if (stuscore > (thresha - 1))
+        printf("Student has an A grade\n");
+     if ((stuscore < thresha) && (stuscore >= threshb))
+        printf("Student has an B grade\n");
+@@ -16,7 +16,7 @@ int main () {
+        printf("Student has an C grade\n");
+     if ((stuscore < threshc) && (stuscore >= threshd))
+        printf("Student has an D grade\n");
+-    if (stuscore < threshd)
++    if (threshd > (stuscore - 1))
+        printf("Student has failed the course\n");
+     return 0;
+ }

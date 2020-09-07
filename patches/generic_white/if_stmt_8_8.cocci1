@@ -1,0 +1,10 @@
+@@
+binary operator B1 = {== ,&& };
+expression E0, E2;
+@@
+- if (E0 B1 E2)  
++ if (E2 B1 E0)  
+  {
+  ...
+  }
+// Infered from: (FFmpeg/{prevFiles/prev_2139e5_71258e_libavcodec#ac3dec.c,revFiles/2139e5_71258e_libavcodec#ac3dec.c}: decode_transform_coeffs_ch), (FFmpeg/{prevFiles/prev_2139e5_71258e_libavcodec#ac3dec.c,revFiles/2139e5_71258e_libavcodec#ac3dec.c}: decode_audio_block), (ompi/{prevFiles/prev_eb8cba_cd8f55_src#mpi#f77#type_get_true_extent_f.c,revFiles/eb8cba_cd8f55_src#mpi#f77#type_get_true_extent_f.c}: mpi_type_get_true_extent_f), (ompi/{prevFiles/prev_eb8cba_cd8f55_src#mpi#f77#type_contiguous_f.c,revFiles/eb8cba_cd8f55_src#mpi#f77#type_contiguous_f.c}: mpi_type_contiguous_f), (

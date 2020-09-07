@@ -1,0 +1,39 @@
+diff -u -p a/introclass/introclass:grade:317aa7:004/grade.c b/introclass/introclass:grade:317aa7:004/grade.c
+--- a/introclass/introclass:grade:317aa7:004/grade.c
++++ b/introclass/introclass:grade:317aa7:004/grade.c
+@@ -13,23 +13,26 @@ int main () {
+   printf("Thank you. Now enter student score (percent) >");
+   scanf("\n%f",&percent);
+ 
+-  if (percent == 0 && percent < A && percent < B && percent < C && percent < D)
++  if (percent < D)
+     printf("Student has failed the course\n");
+ 
+   else if (percent >= A)
+     grade='A';
+ 
+-  else if ((percent < A) && (percent >= B))
+-    grade='B';
++  else {if ((percent >= B))
++      grade='B';
+ 
+-  else if ((percent < B) && (percent >= C))
+-    grade='C';
++    else {if ((percent >= C))
++        grade='C';
+ 
+-  else if ((percent < C) && (percent >= D))
+-    grade='D';
++      else {if ((percent >= D))
++          grade='D';
+ 
+-  else if ((percent < D) && (percent > 0))
+-    grade='F';
++        else if ((percent < D) && (percent > 0))
++          grade='F';
++      }
++    }
++   }
+ 
+   
+    printf("Student has an %c grade\n",grade);

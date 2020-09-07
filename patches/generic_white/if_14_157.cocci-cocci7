@@ -1,0 +1,16 @@
+@@
+identifier I2;
+expression E1;
+expression E0;
+@@
+- if (E0 &&  (E1 <  I2))  
++ if (E0)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (freebsd/{prevFiles/prev_edb5fb_72fb56_sys#kern#sys_pipe.c,revFiles/edb5fb_72fb56_sys#kern#sys_pipe.c}: pipe_write)

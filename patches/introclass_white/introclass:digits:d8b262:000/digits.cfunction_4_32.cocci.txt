@@ -1,0 +1,10 @@
+diff -u -p a/introclass/introclass:digits:d8b262:000/digits.c b/introclass/introclass:digits:d8b262:000/digits.c
+--- a/introclass/introclass:digits:d8b262:000/digits.c
++++ b/introclass/introclass:digits:d8b262:000/digits.c
+@@ -19,5 +19,5 @@ int main(void){
+ 	printf("\nThat's all, have a nice day!\n");
+ 		
+ 	 
+-return(0);
++return 0;
+ }

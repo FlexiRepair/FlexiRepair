@@ -1,0 +1,25 @@
+diff -u -p a/introclass/introclass:smallest:dedc2a:000/smallest.c b/introclass/introclass:smallest:dedc2a:000/smallest.c
+--- a/introclass/introclass:smallest:dedc2a:000/smallest.c
++++ b/introclass/introclass:smallest:dedc2a:000/smallest.c
+@@ -10,13 +10,15 @@ main(void){
+ 	printf("Please enter 4 numbers separated by spaces > ");
+ 	scanf("%f %f %f %f", &a, &b, &c, &d);
+ 
+-	if((a < b) && (a < c) && (a < d))
++	if ((a < d))
+ 		printf("%.0f is the smallest\n", a);
+-	else if ((b < a) && (b < c) && (b < d))
+-		printf("%.0f is the smallest\n", b);
+-	else if ((c < a) && (c < b) && (c < d))
+-		printf("%.0f is the smallest\n", c);
+-	else printf("%.0f is the smallest\n", d);
++	else {if ((b < d))
++			printf("%.0f is the smallest\n", b);
++		else {if ((c < d))
++				printf("%.0f is the smallest\n", c);
++			else printf("%.0f is the smallest\n", d);
++		}
++	}
+ 
+ 	return(0);
+ }

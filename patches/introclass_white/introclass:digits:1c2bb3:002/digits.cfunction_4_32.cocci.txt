@@ -1,0 +1,11 @@
+diff -u -p a/introclass/introclass:digits:1c2bb3:002/digits.c b/introclass/introclass:digits:1c2bb3:002/digits.c
+--- a/introclass/introclass:digits:1c2bb3:002/digits.c
++++ b/introclass/introclass:digits:1c2bb3:002/digits.c
+@@ -47,6 +47,6 @@ step1 *= 10;
+ 
+ printf("That's all, have a nice day!\n");
+ 
+-return(0);
++return 0;
+ 
+ }

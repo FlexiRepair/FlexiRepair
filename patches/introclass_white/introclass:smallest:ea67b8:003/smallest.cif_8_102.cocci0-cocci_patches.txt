@@ -1,0 +1,27 @@
+diff -u -p a/introclass/introclass:smallest:ea67b8:003/smallest.c b/introclass/introclass:smallest:ea67b8:003/smallest.c
+--- a/introclass/introclass:smallest:ea67b8:003/smallest.c
++++ b/introclass/introclass:smallest:ea67b8:003/smallest.c
+@@ -8,14 +8,16 @@ int main () {
+ 	int a, b, c, d, SN;
+ 	printf("Please enter 4 numbers separated by spaces > ");
+ 	scanf("%d %d %d %d",&a,&b,&c,&d);
+-	if ((a<b) && (a<c) && (a<d))
++	if ((a < d))
+ 		SN=a;
+-	else if ((b<a) && (b<c) && (b<d))
+-		SN=b;
+-	else if ((c<a) && (c<b) && (c<d))
+-		SN=c;
+-	else
+-		SN=d;
++	else {if ((b < d))
++			SN=b;
++		else {if ((c < d))
++				SN=c;
++			else
++				SN=d;
++		}
++	}
+ 	printf("%d is the smallest\n",SN);
+ 
+ 	return 0;

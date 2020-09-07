@@ -1,0 +1,10 @@
+diff -u -p a/introclass/introclass:digits:08c7ea:001/digits.c b/introclass/introclass:digits:08c7ea:001/digits.c
+--- a/introclass/introclass:digits:08c7ea:001/digits.c
++++ b/introclass/introclass:digits:08c7ea:001/digits.c
+@@ -95,5 +95,5 @@ if (n > 9) printf("%d\n",d9);
+ 
+ printf("That's all, have a nice day!\n");
+ 
+-return 0;
++return (0);
+ }

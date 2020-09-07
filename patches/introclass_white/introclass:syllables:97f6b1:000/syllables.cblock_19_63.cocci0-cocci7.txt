@@ -1,0 +1,11 @@
+diff -u -p a/introclass/introclass:syllables:97f6b1:000/syllables.c b/introclass/introclass:syllables:97f6b1:000/syllables.c
+--- a/introclass/introclass:syllables:97f6b1:000/syllables.c
++++ b/introclass/introclass:syllables:97f6b1:000/syllables.c
+@@ -29,5 +29,5 @@ int main(){
+ 				num=num;
+ 			}}
+ 	printf("The number of syllables is %d.\n", num);
+-	return 0;
++	return (0);
+ 	}
+\ No newline at end of file

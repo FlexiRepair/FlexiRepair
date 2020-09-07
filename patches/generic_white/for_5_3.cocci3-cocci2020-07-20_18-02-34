@@ -1,0 +1,9 @@
+@@
+expression E0, E1, E2;
+@@
+- for(E0 = E1;E0 < E2;E0++)  
++ for(E0 = E1;E0 <= E2;E0++)  
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_653-A-17393443-17393469.c,revFiles/653-A-17393443-17393469.c}: main), (codeflaws/{prevFiles/prev_252-B-2803260-2803272.c,revFiles/252-B-2803260-2803272.c}: main), (codeflaws/{prevFiles/prev_49-A-11598208-11598303.c,revFiles/49-A-11598208-11598303.c}: 

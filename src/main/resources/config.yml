@@ -1,0 +1,39 @@
+java:
+    8home:  /Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+spinfer:
+    home:   /data/spinfer/spinfer.native
+coccinelle:
+    home:   /data/spinfer/statics
+
+dataset:
+    inputPath : /data/flexi-data/patches
+    repo:   /data/flexi-data/datasets
+    codeflaws:   /data/codeflaws
+
+miner:
+    projectType : c
+    datapath: /data/flexi-data/
+
+
+
+    pjName : patches
+    portDumps : 6399
+    hostname : localhost
+    inputPath : /data/flexi-data/patches
+    redisPath : /data/flexi/python/data/redis
+    srcMLPath :  /usr/local/bin/srcml
+
+
+    #TUNING PARAMETERS LISTED BELOW
+
+    hunkLimit : 3       # maximum number of hunks
+    patchSize : 50      # maximum number of -\+ lines in a patch
+    patchType : ALL     # the type of the patches from repositories. ALL considers all patches whereas BUG considers patches with commit logs containing "bug" or "fix" keywords
+
+    validList : ALL     # the list of the bugs to be validated permitted values ALL, or comma seperated  bugname located in codeflaws  (e.g. 330-B-bug-16561986-16561997,325-A-bug-4061814-4061951)
+    validType : black   # validation testsuite. Permitted values are white or black
+    prioritizion : file # generic patch prioritizion. Permitted values are project,patch,file,function,hunk
+
+
+    projectList : git   # repositories to mine and infer generic patches. Permitted values ALL, or comma seperated repository name located in datasets.csv
+

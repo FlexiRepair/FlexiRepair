@@ -1,0 +1,33 @@
+diff -u -p a/introclass/introclass:digits:65e02c:008/digits.c b/introclass/introclass:digits:65e02c:008/digits.c
+--- a/introclass/introclass:digits:65e02c:008/digits.c
++++ b/introclass/introclass:digits:65e02c:008/digits.c
+@@ -39,8 +39,9 @@ int main(){
+             printf("\n%d\n%d\n-%d\n", d1, d2, d3);
+         else if (d10 == 0 && d9 == 0 && d8 == 0 && d7 == 0 && d6 == 0 && d5 == 0 && d4 == 0 && d3 == 0 && d2 != 0)
+             printf("\n%d\n-%d\n", d1, d2);
+-        else if (d10 == 0 && d9 == 0 && d8 == 0 && d7 == 0 && d6 == 0 && d5 == 0 && d4 == 0 && d3 == 0 && d2 == 0 && d1!= 0)
+-            printf("\n-%d\n", d1);
++        else {if (d1 != 0 && d10 == 0 && d9 == 0 && d8 == 0 && d7 == 0 && d6 == 0 && d5 == 0 && d4 == 0 && d3 == 0 && d2 == 0)
++                printf("\n-%d\n", d1);
++        }
+ 
+     }
+ 
+@@ -74,11 +75,13 @@ int main(){
+             printf("\n%d\n%d\n", d1, d2);
+         else if (d10 == 0 && d9 == 0 && d8 == 0 && d7 == 0 && d6 == 0 && d5 == 0 && d4 == 0 && d3 == 0 && d2 == 0 && d1!= 0)
+             printf("\n%d\n", d1);
+-        else if(d10 == 0 && d9 == 0 && d8 == 0 && d7 == 0 && d6 == 0 && d5 == 0 && d4 == 0 && d3 == 0 && d2 == 0 && d1== 0)
+-            printf("\n0\n");
++        else {if (d1 == 0 && d10 == 0 && d9 == 0 && d8 == 0 && d7 == 0 && d6 == 0 && d5 == 0 && d4 == 0 && d3 == 0 && d2 == 0)
++                printf("\n0\n");
++    }
++    }
++    else {if (10000000000 < !num)
++            printf("\n7\n4\n6\n3\n8\n4\n7\n4\n1\n2\n");
+     }
+-    else if (!num < 10000000000)
+-    printf("\n7\n4\n6\n3\n8\n4\n7\n4\n1\n2\n");
+ 
+     printf("That's all, have a nice day!\n");
+     return(0);

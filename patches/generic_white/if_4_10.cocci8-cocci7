@@ -1,0 +1,19 @@
+@@
+expression E5;
+expression E4;
+expression E3;
+expression E2;
+expression E1;
+expression E0;
+@@
+- if (E0 &&  E1)  
+- {
+  ...
+- }
+  ...
+- if (E2 &&  E3)  
+- {
+- E4 = E5; 
+- }
+// Infered from: (freebsd/{prevFiles/prev_8ea01c0_c724d1_usr.sbin#kbdmap#kbdmap.c,revFiles/8ea01c0_c724d1_usr.sbin#kbdmap#kbdmap.c}: menu_read)
+

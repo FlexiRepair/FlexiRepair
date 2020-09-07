@@ -1,0 +1,27 @@
+diff -u -p a/introclass/introclass:median:c716ee:002/median.c b/introclass/introclass:median:c716ee:002/median.c
+--- a/introclass/introclass:median:c716ee:002/median.c
++++ b/introclass/introclass:median:c716ee:002/median.c
+@@ -10,17 +10,17 @@ main(void)
+ 	printf("Please enter 3 numbers separated by spaces > ");
+ 	scanf("%d%d%d", &A, &B, &C);
+ 
+-	if ( A > B && A < C)
++	if (B <= A && C >= A)
+ 		printf("%d is the median\n", A);
+-	if ( A > C && A < B)
++	if (C <= A && B >= A)
+ 		printf("%d is the median\n", A);
+-	if ( B > C && B < A)
++	if (C <= B && A >= B)
+ 		printf("%d is the median\n", B);
+-	if ( B > A && B < C)
++	if (A <= B && C >= B)
+ 		printf("%d is the median\n", B);
+-	if ( C > A && C < B)
++	if (A <= C && B >= C)
+ 		printf("%d is the median\n", C);
+-	if ( C > B && C < A)
++	if (B <= C && A >= C)
+ 		printf("%d is the median\n", C);
+ 
+ return(0);

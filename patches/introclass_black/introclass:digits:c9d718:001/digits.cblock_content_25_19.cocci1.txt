@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:digits:c9d718:001/digits.c b/introclass/introclass:digits:c9d718:001/digits.c
+--- a/introclass/introclass:digits:c9d718:001/digits.c
++++ b/introclass/introclass:digits:c9d718:001/digits.c
+@@ -26,7 +26,7 @@ int main(void){
+ 		printf("-%d\n",digit);
+ 	}
+ 	if (value== 0){
+-		digit=value;
++		return value;
+ 		printf("%d\n",digit);
+ 	}		
+ 	printf("That's all, have a nice day!\n");

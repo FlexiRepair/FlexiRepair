@@ -1,0 +1,6 @@
+@@
+identifier I0;
+@@
+- char I0; 
++ int I0; 
+

@@ -1,0 +1,10 @@
+diff -u -p a/introclass/introclass:smallest:c868b3:001/smallest.c b/introclass/introclass:smallest:c868b3:001/smallest.c
+--- a/introclass/introclass:smallest:c868b3:001/smallest.c
++++ b/introclass/introclass:smallest:c868b3:001/smallest.c
+@@ -30,5 +30,5 @@ int main()
+ 
+   smallest = numbers[0];
+   printf("%d is the smallest\n", smallest);
+-  return 0;
++  return (0);
+ }

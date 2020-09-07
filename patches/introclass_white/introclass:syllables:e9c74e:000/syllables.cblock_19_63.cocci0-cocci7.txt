@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:syllables:e9c74e:000/syllables.c b/introclass/introclass:syllables:e9c74e:000/syllables.c
+--- a/introclass/introclass:syllables:e9c74e:000/syllables.c
++++ b/introclass/introclass:syllables:e9c74e:000/syllables.c
+@@ -19,7 +19,7 @@ int main ()
+     vowelcounter(s1, &syll);
+     printf("The number of syllables is %d.\n", syll);
+ 
+-    return 0;
++    return (0);
+ }
+ 
+ void vowelcounter(const char s1[], int *syllp)

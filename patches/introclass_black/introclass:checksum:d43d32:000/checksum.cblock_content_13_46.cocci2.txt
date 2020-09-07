@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:checksum:d43d32:000/checksum.c b/introclass/introclass:checksum:d43d32:000/checksum.c
+--- a/introclass/introclass:checksum:d43d32:000/checksum.c
++++ b/introclass/introclass:checksum:d43d32:000/checksum.c
+@@ -5,7 +5,7 @@
+ int
+ main(void)
+ {
+-    char input;
++    int input;
+     int a, checksum;
+ 
+     printf("Enter an abitrarily long string, ending with carriage return > ");

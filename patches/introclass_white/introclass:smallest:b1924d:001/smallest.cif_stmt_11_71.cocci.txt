@@ -1,0 +1,52 @@
+diff -u -p a/introclass/introclass:smallest:b1924d:001/smallest.c b/introclass/introclass:smallest:b1924d:001/smallest.c
+--- a/introclass/introclass:smallest:b1924d:001/smallest.c
++++ b/introclass/introclass:smallest:b1924d:001/smallest.c
+@@ -10,36 +10,36 @@ int main()
+ 	printf("Please enter 4 numbers seperated by spaces > ");
+ 	scanf( "%d %d %d %d", &num1, &num2, &num3, &num4);
+ 
+-	if (num1 < num2){
+-		if (num1 < num3){
+-			if (num1 < num4){
++	if (num2 > (num1 - 1)){
++		if (num3 > (num1 - 1)){
++			if (num4 > (num1 - 1)){
+ 				smallest = num1;
+ 			}
+ 		}
+ 
+ 	}
+ 
+-        if (num2 < num1){
+-                if (num2 < num3){
+-                        if (num2 < num4){
++        if (num1 > (num2 - 1)){
++                if (num3 > (num2 - 1)){
++                        if (num4 > (num2 - 1)){
+                                 smallest = num2;
+                         }
+                 }
+ 
+         }
+ 
+-        if (num3 < num1){
+-                if (num3 < num2){
+-                        if (num3 < num4){
++        if (num1 > (num3 - 1)){
++                if (num2 > (num3 - 1)){
++                        if (num4 > (num3 - 1)){
+                                 smallest = num3;
+                         }
+                 }
+ 
+         }
+ 
+-        if (num4 < num1){
+-                if (num4 < num2){
+-                        if (num4 < num3){
++        if (num1 > (num4 - 1)){
++                if (num2 > (num4 - 1)){
++                        if (num3 > (num4 - 1)){
+                                 smallest = num4;
+                         }
+                 }

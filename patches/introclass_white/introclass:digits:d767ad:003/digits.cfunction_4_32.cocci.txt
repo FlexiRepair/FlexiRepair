@@ -1,0 +1,11 @@
+diff -u -p a/introclass/introclass:digits:d767ad:003/digits.c b/introclass/introclass:digits:d767ad:003/digits.c
+--- a/introclass/introclass:digits:d767ad:003/digits.c
++++ b/introclass/introclass:digits:d767ad:003/digits.c
+@@ -33,6 +33,6 @@ int main () {
+ 		}
+ 		
+ 	}
+-	return(0);
++	return 0;
+ 
+ }

@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:checksum:659a73:002/checksum.c b/introclass/introclass:checksum:659a73:002/checksum.c
+--- a/introclass/introclass:checksum:659a73:002/checksum.c
++++ b/introclass/introclass:checksum:659a73:002/checksum.c
+@@ -6,7 +6,7 @@ int main(){
+   char string[length];
+   int count, i, count2;
+   printf("Enter an abitrarily long string, ending with carriage return > ");
+-  scanf("%s", string);
++  gets(string);
+   count = 0; count2 = 0;
+   for(i=0; i < length; ++i){
+     count += (int)string[i];

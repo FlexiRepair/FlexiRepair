@@ -1,0 +1,10 @@
+diff -u -p a/introclass/introclass:smallest:953627:009/smallest.c b/introclass/introclass:smallest:953627:009/smallest.c
+--- a/introclass/introclass:smallest:953627:009/smallest.c
++++ b/introclass/introclass:smallest:953627:009/smallest.c
+@@ -27,5 +27,5 @@ main(void)
+ 	printf("%d is the smallest\n", d);
+ 	else
+ 	printf("%d is the smallest\n", a);
+-return(0);
++return 0;
+ }

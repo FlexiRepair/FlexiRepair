@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:median:b6fd40:000/median.c b/introclass/introclass:median:b6fd40:000/median.c
+--- a/introclass/introclass:median:b6fd40:000/median.c
++++ b/introclass/introclass:median:b6fd40:000/median.c
+@@ -14,7 +14,7 @@ int main()
+ 		n2=n1;
+ 		n1=temp;
+ 	}
+-	if((n3<n2)&&(n3>n1))
++	if ((n3 < n2))
+ 	{
+ 		temp=n2;
+ 		n2=n3;

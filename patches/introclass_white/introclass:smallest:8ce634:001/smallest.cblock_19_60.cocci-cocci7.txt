@@ -1,0 +1,20 @@
+diff -u -p a/introclass/introclass:smallest:8ce634:001/smallest.c b/introclass/introclass:smallest:8ce634:001/smallest.c
+--- a/introclass/introclass:smallest:8ce634:001/smallest.c
++++ b/introclass/introclass:smallest:8ce634:001/smallest.c
+@@ -5,11 +5,11 @@
+ int
+ main(void){
+ 
+-  int num1; //**/
+-  int num2; //**/
+-  int num3; //**/
+-  int num4; //**/
+-  int smallest; //**/
++  int num1 = 0; //**/
++  int num2 = 0; //**/
++  int num3 = 0; //**/
++  int num4 = 0; //**/
++  int smallest = 0; //**/
+ 
+ 
+   //**/

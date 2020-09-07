@@ -1,0 +1,21 @@
+diff -u -p a/introclass/introclass:digits:1391c9:001/digits.c b/introclass/introclass:digits:1391c9:001/digits.c
+--- a/introclass/introclass:digits:1391c9:001/digits.c
++++ b/introclass/introclass:digits:1391c9:001/digits.c
+@@ -12,7 +12,7 @@ printf("Please enter a number > ");
+ scanf("%d", &Num);
+ 
+ //**/
+-if (Num == 0){printf("0\n");}
++if (0 == Num){printf("0\n");}
+ 
+ while (Num > 0)
+ {
+@@ -29,7 +29,7 @@ NewNum = (Num - X)/10;
+ 
+ if (X<0){printf("%d\n", (X*-1));}
+ 
+-if (Num < 0 && Num > -10){printf("%d\n", X);}
++if (Num > -10 && Num < 0){printf("%d\n", X);}
+ Num = NewNum;
+ 
+ }

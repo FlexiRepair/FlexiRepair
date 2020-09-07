@@ -1,0 +1,10 @@
+diff -u -p a/introclass/introclass:median:0cdfa3:004/median.c b/introclass/introclass:median:0cdfa3:004/median.c
+--- a/introclass/introclass:median:0cdfa3:004/median.c
++++ b/introclass/introclass:median:0cdfa3:004/median.c
+@@ -18,5 +18,5 @@ int main()
+ 
+   printf("%d is the median\n", median);
+ 
+-  return 0;
++  return (0);
+ }

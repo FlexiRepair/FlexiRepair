@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:syllables:d5059e:000/syllables.c b/introclass/introclass:syllables:d5059e:000/syllables.c
+--- a/introclass/introclass:syllables:d5059e:000/syllables.c
++++ b/introclass/introclass:syllables:d5059e:000/syllables.c
+@@ -12,7 +12,7 @@ int main(void){
+ 	int i=0, counter=0, totChar;
+ 
+ 	printf("Please enter a string > ");
+-	scanf("%s", list);
++	gets(list);
+ 
+ 	totChar = strlen(list);
+ 

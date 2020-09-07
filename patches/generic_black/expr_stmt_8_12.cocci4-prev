@@ -1,0 +1,5 @@
+@@
+expression E0;
+@@
+- scanf("%s", E0); 
++ gets(E0); 

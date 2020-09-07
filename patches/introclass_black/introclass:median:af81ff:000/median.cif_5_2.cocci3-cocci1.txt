@@ -1,0 +1,14 @@
+diff -u -p a/introclass/introclass:median:af81ff:000/median.c b/introclass/introclass:median:af81ff:000/median.c
+--- a/introclass/introclass:median:af81ff:000/median.c
++++ b/introclass/introclass:median:af81ff:000/median.c
+@@ -25,8 +25,9 @@ printf("%.0f is the median\n", first);
+ else if (comp_sec < comp_fir && comp_sec < comp_thi)
+ printf("%.0f is the median\n", second);
+ 
+-else if (comp_thi < comp_fir && comp_thi < comp_sec)
++else {if (comp_thi <= comp_fir && comp_sec >= comp_thi)
+ printf("%.0f is the median\n", third);
++}
+ 
+ return(0);
+ 

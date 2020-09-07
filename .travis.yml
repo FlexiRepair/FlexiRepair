@@ -1,0 +1,13 @@
+sudo: required
+dist: bionic
+language: java
+before_install:
+  - chmod +x .travis_native_dependencies.sh
+  - ./.travis_native_dependencies.sh
+jdk:
+  - openjdk8
+install: true
+script: mvn clean package #-DskipTests=true
+
+after_success:
+  - mvn clean test jacoco:report coveralls:report

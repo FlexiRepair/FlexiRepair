@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:smallest:c868b3:001/smallest.c b/introclass/introclass:smallest:c868b3:001/smallest.c
+--- a/introclass/introclass:smallest:c868b3:001/smallest.c
++++ b/introclass/introclass:smallest:c868b3:001/smallest.c
+@@ -9,7 +9,7 @@ int main()
+   int numbers[4];
+ 
+   printf("Please enter 4 numbers separated by spaces > ");
+-  for(i = 0; i < 3; i++)
++  for (i = 0; i <= 3; i++)
+   {
+     scanf("%d", &x);
+     numbers[i] = x; 

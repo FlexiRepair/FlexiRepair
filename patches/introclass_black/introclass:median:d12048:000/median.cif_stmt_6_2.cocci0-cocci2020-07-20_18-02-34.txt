@@ -1,0 +1,22 @@
+diff -u -p a/introclass/introclass:median:d12048:000/median.c b/introclass/introclass:median:d12048:000/median.c
+--- a/introclass/introclass:median:d12048:000/median.c
++++ b/introclass/introclass:median:d12048:000/median.c
+@@ -14,12 +14,13 @@ int main(void) {
+     b = a;
+     a = temp;
+   }
+-  if (a<c)
++  if (a < c - 4)
+     median = b;
+-  else if (b>c)
+-    median = a;
+-  else 
+-    median = c;
++  else {if (c < b - 4)
++      median = a;
++    else 
++      median = c;
++  }
+ 
+   printf("%d is the median\n", median);
+ 

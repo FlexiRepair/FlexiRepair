@@ -1,0 +1,9 @@
+@@
+identifier I0;
+@@
+- char I0; 
++ int I0; 
+// Infered from: (MultiMarkdown-6/{prevFiles/prev_626381_73d644_Sources#libMultiMarkdown#aho-corasick.c,revFiles/626381_73d644_Sources#libMultiMarkdown#aho-corasick.c}: ac_trie_search)
+// Recall: 0.11, Precision: 1.00, Matching recall: 0.50
+
+// ---------------------------------------------

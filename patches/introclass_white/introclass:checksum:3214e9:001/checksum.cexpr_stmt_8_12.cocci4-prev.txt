@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:checksum:3214e9:001/checksum.c b/introclass/introclass:checksum:3214e9:001/checksum.c
+--- a/introclass/introclass:checksum:3214e9:001/checksum.c
++++ b/introclass/introclass:checksum:3214e9:001/checksum.c
+@@ -13,7 +13,7 @@ int
+ 
+ 	printf("Enter an abitrarily long string, ending with carriage return > ");
+ 	
+-	scanf("%s", &userinput);	//**/
++	gets(&userinput);	//**/
+ 	
+ 	
+ 	for (i = 0; userinput[i]!= 0 ; i++)	//**/

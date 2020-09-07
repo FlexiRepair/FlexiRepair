@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:syllables:ca5057:000/syllables.c b/introclass/introclass:syllables:ca5057:000/syllables.c
+--- a/introclass/introclass:syllables:ca5057:000/syllables.c
++++ b/introclass/introclass:syllables:ca5057:000/syllables.c
+@@ -30,7 +30,7 @@ int main ()
+     temp = inputString[k];
+     for(j = 0; (j < 5); j++)
+     {
+-      if(temp == vowels[j])
++      if (vowels[j] == temp)
+       {
+         syl = syl + 1;
+         j = 5;

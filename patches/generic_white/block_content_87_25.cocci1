@@ -1,0 +1,11 @@
+@@
+expression E0, E1, E2;
+@@
+- if (E0)  
+- {
+- E1 = E2; 
+- }
+// Infered from: (gpdb/{prevFiles/prev_1c5c12_4c04ed_src#backend#cdb#dispatcher#cdbgang_async.c,revFiles/1c5c12_4c04ed_src#backend#cdb#dispatcher#cdbgang_async.c}: createGang_async)
+// Recall: 0.07, Precision: 1.00, Matching recall: 0.17
+
+// ---------------------------------------------

@@ -1,0 +1,25 @@
+diff -u -p a/introclass/introclass:digits:317aa7:004/digits.c b/introclass/introclass:digits:317aa7:004/digits.c
+--- a/introclass/introclass:digits:317aa7:004/digits.c
++++ b/introclass/introclass:digits:317aa7:004/digits.c
+@@ -6,14 +6,12 @@
+ int main (void) {
+ 
+   int integer, i, digit; 
+-  printf("\nEnter an integer > ");
+   scanf("\n%d",&integer);
+   digit=0;
+   for (i=1; i <=10; i+=1) {
+     digit=integer%10;
+     
+     if (integer == 0){
+-      printf("0\n");
+       break;
+     }
+     else if (fabs(digit)<10) {
+@@ -30,6 +28,5 @@ int main (void) {
+    
+   }
+ 
+-  printf("\nThat's all, have a nice day!\n");
+   return (0);
+ }

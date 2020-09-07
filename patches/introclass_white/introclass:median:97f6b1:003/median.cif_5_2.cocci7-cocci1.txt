@@ -1,0 +1,33 @@
+diff -u -p a/introclass/introclass:median:97f6b1:003/median.c b/introclass/introclass:median:97f6b1:003/median.c
+--- a/introclass/introclass:median:97f6b1:003/median.c
++++ b/introclass/introclass:median:97f6b1:003/median.c
+@@ -5,17 +5,19 @@ int main(){
+ int a, b, c, median;
+ printf("Please enter 3 numbers separated by spaces > ");
+ scanf("%d%d%d", &a, &b, &c);
+-if (a > b && a < c)
++if (a >= b && a <= c)
+ 	median = a;
+ else if (a < b && a > c)
+ 	median = a;
+-else if (b > a && b < c)
+-	median = b;
+-else if (b < a && b > c)
+-	median = b;
+-else if (c > a && c < b)
+-	median = c;
+-else if (c < a && c > b)
+-	median = c;
++else {if (b >= a && b <= c)
++		median = b;
++	else if (b < a && b > c)
++		median = b;
++	else {if (c >= a && c <= b)
++			median = c;
++		else if (c < a && c > b)
++			median = c;
++	}
++}
+ printf("%d is the median\n", median);
+ return 0;}
+\ No newline at end of file

@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:syllables:d12048:000/syllables.c b/introclass/introclass:syllables:d12048:000/syllables.c
+--- a/introclass/introclass:syllables:d12048:000/syllables.c
++++ b/introclass/introclass:syllables:d12048:000/syllables.c
+@@ -12,7 +12,7 @@ int main (void) {
+   count = 0;
+ 
+   printf ("Please enter a string > ");
+-  scanf ("%s", word);
++  gets(word);
+ 
+   for (i=0; i<=STR_LEN-1; i++) {
+     if (word[i] == 'a' ||

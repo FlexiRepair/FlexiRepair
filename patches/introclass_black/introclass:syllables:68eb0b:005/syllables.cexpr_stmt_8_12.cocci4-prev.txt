@@ -1,0 +1,12 @@
+diff -u -p a/introclass/introclass:syllables:68eb0b:005/syllables.c b/introclass/introclass:syllables:68eb0b:005/syllables.c
+--- a/introclass/introclass:syllables:68eb0b:005/syllables.c
++++ b/introclass/introclass:syllables:68eb0b:005/syllables.c
+@@ -16,7 +16,7 @@ int count,vowel;
+ count=0;
+ 
+ printf("Please enter a string > ");
+-scanf("%s",x);
++gets(x);
+ 
+ vowel=0;
+ while(x[vowel]!='\0')

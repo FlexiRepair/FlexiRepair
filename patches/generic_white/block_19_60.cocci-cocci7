@@ -1,0 +1,7 @@
+@@
+identifier I1;
+type T0;
+@@
+- T0 I1; 
++ T0 I1 = 0; 
+// Infered from: (openssl/{prevFiles/prev_4c9b0a_4407d0_crypto#evp#p_verify.c,revFiles/4c9b0a_4407d0_crypto#evp#p_verify.c}: EVP_VerifyFinal), (openssl/{prevFiles/prev_4c9b0a_4407d0_crypto#evp#p_sign.c,revFiles/4c9b0a_4407d0_crypto#evp#p_sign.c}: EVP_SignFinal)

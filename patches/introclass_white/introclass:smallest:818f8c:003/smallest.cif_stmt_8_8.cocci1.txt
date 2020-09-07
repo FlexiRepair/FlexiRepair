@@ -1,0 +1,19 @@
+diff -u -p a/introclass/introclass:smallest:818f8c:003/smallest.c b/introclass/introclass:smallest:818f8c:003/smallest.c
+--- a/introclass/introclass:smallest:818f8c:003/smallest.c
++++ b/introclass/introclass:smallest:818f8c:003/smallest.c
+@@ -31,10 +31,11 @@ int main(void)
+                 printf("%d is the smallest\n",num_smallest);
+                 }
+ 
+-        else if ((num4 <= num1) && (num4 <= num2) && (num4 <= num3))
+-            	{
+-		num_smallest = num1;
+-                printf("%d is the smallest\n",num_smallest);
++        else {if ((num4 <= num3) && (num4 <= num1) && (num4 <= num2))
++		{
++			num_smallest = num1;
++	                printf("%d is the smallest\n",num_smallest);
++	              	}
+               	}
+ 	
+ 	return 0;

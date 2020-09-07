@@ -1,0 +1,11 @@
+@@
+expression E0;
+expression E1;
+@@
+- if (E0 && E1)  
++ if (E0)  
+  {
+  ...
+  }
+// Infered from: (wireshark/{prevFiles/prev_7ec7e4_9e4b29_epan#dissectors#packet-bthci_evt.c,revFiles/7ec7e4_9e4b29_epan#dissectors#packet-bthci_evt.c}: dissect_bthci_evt_remote_name_req_complete), (wireshark/{prevFiles/prev_7ec7e4_9e4b29_epan#dissectors#packet-bthci_evt.c,revFiles/7ec7e4_9e4b29_epan#dissectors#packet-bthci_evt.c}: dissect_bthci_evt_command_complete)
+

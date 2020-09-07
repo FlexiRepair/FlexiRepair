@@ -1,0 +1,6 @@
+@@
+expression E0;
+@@
+- return E0; 
++ return (E0); 
+// Infered from: (freebsd/{prevFiles/prev_bdf128_0d8654_sys#kern#kern_thread.c,revFiles/bdf128_0d8654_sys#kern#kern_thread.c}: kse_thr_interrupt),

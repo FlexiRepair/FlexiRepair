@@ -1,0 +1,29 @@
+diff -u -p a/introclass/introclass:grade:531924:000/grade.c b/introclass/introclass:grade:531924:000/grade.c
+--- a/introclass/introclass:grade:531924:000/grade.c
++++ b/introclass/introclass:grade:531924:000/grade.c
+@@ -8,14 +8,17 @@ user_grade(float percent, float a, float
+ {
+   if (percent < d)
+     return 'F';
+-  else if ((percent > d) && (percent < c))
+-    return 'D';
+-  else if ((percent > c) && (percent < b))
+-    return 'C';
+-  else if ((percent > b) && (percent < a))
+-    return 'B';
+-  else
+-    return 'A';
++  else {if ((percent < c))
++      return 'D';
++    else {if ((percent < b))
++        return 'C';
++      else {if ((percent < a))
++          return 'B';
++        else
++          return 'A';
++      }
++    }
++  }
+ }
+ 
+ int

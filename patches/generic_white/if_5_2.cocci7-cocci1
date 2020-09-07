@@ -1,0 +1,19 @@
+@@
+expression E2;
+expression E1;
+expression E0;
+@@
+- if (E0 > E1 && E0 < E2)  
++ if (E0 >= E1 && E0 <= E2)  
+  {
+  ...
+  }
+- else
++ else
+  {
+  ...
+  }
+// Infered from: (codeflaws/{prevFiles/prev_14-B-15850390-15850395.c,revFiles/14-B-15850390-15850395.c}: main)
+// Recall: 0.06, Precision: 1.00, Matching recall: 1.00
+
+// ---------------------------------------------

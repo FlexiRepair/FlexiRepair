@@ -1,0 +1,14 @@
+diff -u -p a/introclass/introclass:median:3cf6d3:001/median.c b/introclass/introclass:median:3cf6d3:001/median.c
+--- a/introclass/introclass:median:3cf6d3:001/median.c
++++ b/introclass/introclass:median:3cf6d3:001/median.c
+@@ -15,8 +15,9 @@ int main () {
+ 	else if ((b > a && a > c) || (c > a && a > b)) {
+ 		printf ("%d is the median\n", a);
+ 		}
+-	else if ((a > c && c > b) || (b > c && c > a)) {
++	else {
+ 		printf ("%d is the median\n", c);
++		
+ 		}
+ 	
+ 	return 0;
