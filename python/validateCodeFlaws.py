@@ -114,7 +114,7 @@ def validateCore(t):
             continue
 
         buggyFileName = contestid+'-'+problem+'-'+buggyId+'.c'
-        path = join(DATA_PATH,'codeflaws',bugName,buggyFileName)
+        path = join(CODEFLAWS_PATH,bugName,buggyFileName)
         patch = patchSourceFile(path, spfile, bugName)
 
         times = 0
@@ -126,9 +126,9 @@ def validateCore(t):
         cmd = 'make -C ' + join(CODEFLAWS_PATH, bugName) + ' FILENAME=' + bugName + spfile
         o, e = shellGitCheckout(cmd)
 
-        if isfile(join(DATA_PATH,'codeflaws',bugName,bugName+spfile)):
+        if isfile(join(CODEFLAWS_PATH,bugName,bugName+spfile)):
 
-            cmd = 'mv ' + join(DATA_PATH,'codeflaws',bugName,bugName+spfile) + ' ' + join(DATA_PATH,'codeflaws',bugName,contestid+'-'+problem+'-'+buggyId)
+            cmd = 'mv ' + join(CODEFLAWS_PATH,bugName,bugName+spfile) + ' ' + join(CODEFLAWS_PATH,bugName,contestid+'-'+problem+'-'+buggyId)
             o, e = shellGitCheckout(cmd)
 
             output += '@True:' + str(idx) + ':' + patch.split('/')[-1] + '@'
