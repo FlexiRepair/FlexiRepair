@@ -151,7 +151,7 @@ public class EnhancedASTDiff {
 				if(count>= Integer.valueOf(patchSize))
 //				if(count>201)
 					continue;
-				if(FileHelper.readFile(diffentryFile).split("@@\\s\\-\\d+,*\\d*\\s\\+\\d+,*\\d*\\s@@").length >= hunkLimit)
+				if(FileHelper.readFile(diffentryFile).split("@@\\s\\-\\d+,*\\d*\\s\\+\\d+,*\\d*\\s@@").length > hunkLimit)
 					continue;
 
 //				String datasetName = project;

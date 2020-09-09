@@ -121,6 +121,7 @@ def test():
 
 
 def runSpinfer():
+    [os.remove(join(SPINFER_INDEX_PATH, i)) for i in listdir(SPINFER_INDEX_PATH) if i.endswith('.index')]
     indexCore()
     indexes = listdir(SPINFER_INDEX_PATH)
     indexes = [i for i in indexes if i.endswith('.index')]
@@ -216,7 +217,8 @@ def divideCoccis():
     shutil.copytree(join(SPINFER_INDEX_PATH,'cocci'),join(DATA_PATH,'cocci'+ datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')))
 
     coccis =os.listdir(join(SPINFER_INDEX_PATH,'cocci'))
-    for cocci in coccis:
+    toDivide = [i for i in coccis if i.endswith('cocci')]
+    for cocci in toDivide:
         with open(join(SPINFER_INDEX_PATH,'cocci',cocci), 'r') as iFile:
             idx = iFile.readlines()
             idx
@@ -226,10 +228,20 @@ def divideCoccis():
         points = list(itertools.chain.from_iterable(points))
         if len(points) == 0:
             os.remove(join(SPINFER_INDEX_PATH, 'cocci', cocci))
+            continue
         # patches = list(zip(*([iter(points)] * 2)))
         patches = list(pairwise(points[::2]))# every second element in list
+        existingGenericPatches = [i for i in coccis if i.startswith(cocci)]
+        fileNumber = 0
+        if len(existingGenericPatches) > 1:
+            existingGenericPatches.remove(cocci)
+            fileNumber = max([int(re.findall(r".cocci([0-9]+)", i)[0]) for i in existingGenericPatches]) + 1
+
+
+
         if len(patches) > 0:
-            i = 0;
+
+            i = fileNumber;
             for t in patches :
                 t
                 with open(join(SPINFER_INDEX_PATH, 'cocci', cocci+str(i)), 'w') as iFile:
@@ -239,6 +251,11 @@ def divideCoccis():
             with open(join(SPINFER_INDEX_PATH, 'cocci', cocci + str(i)), 'w') as iFile:
                 iFile.writelines(idx[t[1]:])
             os.remove(join(SPINFER_INDEX_PATH, 'cocci', cocci))
+        else:
+            os.rename(join(SPINFER_INDEX_PATH, 'cocci', cocci),
+                      join(SPINFER_INDEX_PATH, 'cocci', cocci + str(fileNumber)))
+            coccis.remove(cocci)
+            coccis.append(cocci + str(fileNumber))
 
 def getFreqPatterns():
     patterns = load_zipped_pickle(join(DATA_PATH, 'allCocciPatterns.pickle'))
@@ -355,11 +372,14 @@ def removeDuplicates2():
     # print(len(uniquePatterns))
 
 def removeDuplicates():
+
     commentPattern = r"(/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/)|(//.*)"
     coccis =os.listdir(join(SPINFER_INDEX_PATH, 'cocci'))
     cocciPatterns = pd.DataFrame(columns=['cid', 'pattern','inferedFrom','recall','precision','matchingRecall'])
     ind = 0
     for cocci in coccis:
+        if cocci == '.DS_Store':
+            continue
         with open(join(SPINFER_INDEX_PATH, 'cocci', cocci), 'r') as iFile:
             idx = iFile.read()
             idx
@@ -375,15 +395,14 @@ def removeDuplicates():
     cocciPatterns.sort_values(by='freq', inplace=True, ascending=False)
 
     uPatterns = cocciPatterns.groupby(by=['pattern'], as_index=False).agg(lambda x: x.tolist())
-    uPatterns['uid'] = uPatterns.cid.apply(lambda x: min(x, key=len))
+    # uPatterns['uid'] = uPatterns.cid.apply(lambda x: min(x, key=len))
+    uPatterns['uid'] = uPatterns.cid.apply(lambda x: [i for i in x if i.endswith( '.cocci'+str(min([int(re.findall(r".cocci([0-9]+)", i)[0]) for i in x])))][0])
     uPatterns['uFiles'] = uPatterns.iFiles.apply(lambda x: list(set(itertools.chain.from_iterable(x))))
     uPatterns['uFreq'] = uPatterns.uFiles.apply(lambda x: len(x))
     uPatterns['uProjects'] = uPatterns.uFiles.apply(lambda x: list(set([i.split('/{')[0].replace('(','') for i in x])))
     uPatterns['allProjects'] = uPatterns.uFiles.apply(lambda x: list([i.split('/{')[0].replace('(', '') for i in x]))
 
     uPatterns.sort_values(by='uFreq', inplace=True, ascending=False)
-
-
 
 
     uPatterns.uFiles.apply(lambda x: len(set([i.split(':')[-1] for i in x])))
@@ -405,6 +424,12 @@ def removeDuplicates():
     # save_zipped_pickle(cocciPatterns,join(DATA_PATH,'allCocciPatterns.pickle'))
     save_zipped_pickle(cocciPatterns,join(DATA_PATH,'allCocciPatterns.pickle'))
     save_zipped_pickle(uPatterns,join(DATA_PATH,'uPatterns.pickle'))
+
+    duplicatedPatterns = list(itertools.chain.from_iterable(uPatterns[uPatterns.cid.apply(lambda x: len(x) > 1)].cid.values.tolist()))
+    removeDups = [i for i in duplicatedPatterns if i not in uPatterns.uid.values.tolist()]
+    print("{} duplicated generic pathes to remove ".format(str(len(removeDups))))
+    for i in removeDups:
+        os.remove(join(SPINFER_INDEX_PATH, 'cocci', i))
 
 
 
