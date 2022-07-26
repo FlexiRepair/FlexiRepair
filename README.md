@@ -1,6 +1,17 @@
 # FlexiRepair 
 
+## Citing FlexiRepair
 
+You can cite FlexiRepair using the following bibtex:
+
+```
+@article{koyuncu2020flexirepair,
+  title={Flexirepair: Transparent program repair with generic patches},
+  author={Koyuncu, Anil and Bissyand{\'e}, Tegawend{\'e} F and Klein, Jacques and Traon, Yves Le},
+  journal={arXiv preprint arXiv:2011.13280},
+  year={2020}
+}
+  ```
 
 ## I. Introduction
 
